@@ -1,16 +1,11 @@
 @media screen and (max-width: 700px) {
     #main-grid {
-        grid-template-columns: 1fr !important;
-        grid-template-rows: 1fr 1fr;
+        display: block !important;
     }
     
-    #link-container {
-        position: initial !important;
-        margin: 2em;
-    }
-
-    #about {
-        margin: 2em;
+    #link-container, #about {
+        position: relative !important;
+        margin: 2em !important;
     }
 
     #about div {
@@ -25,23 +20,16 @@ body, html {
 }
 
 #background {
+    width: 100%;
     height: 100%;
     animation-fill-mode: forwards;
     animation: appear 0.25s;
+    object-fit: cover;
 }
 
 @keyframes appear {
     0% { opacity: 0; }
     100% { opacity: 1; }  
-}
-
-
-#background-overlay {
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
 }
 
 #main-grid {
@@ -53,7 +41,7 @@ body, html {
     text-align: center;
     color: #AAAAAA;
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 #about {
@@ -95,7 +83,7 @@ body, html {
 }
 
 .logo {
-    display: inline-block;
+    display: inline;
     width: 4em;
     height: 4em;
     mix-blend-mode: luminosity;
