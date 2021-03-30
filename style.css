@@ -45,7 +45,7 @@ body {
   pointer-events: none;
   z-index: 1;
   font-size: 2em;
-  padding: 8em;
+  padding: 1em;
 }
 
 .overlay-image, a {
