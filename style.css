@@ -1,110 +1,124 @@
-@media screen and (max-width: 700px) {
-    #main-grid {
-        display: block !important;
-    }
-    
-    #link-container, #about {
-        position: relative !important;
-        margin: 2em !important;
-    }
-
-    #about div {
-        text-align: center !important;
-    }
-
-    .logo {
-        margin: 0.25em ! important;
-    }
-
-    #background {
-        opacity: 0.75;
-    }
+* {
+  cursor: default;
+  font-size: 12px;
+  font-family: sans-serif;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-    background-color: black;
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
 }
 
-#background {
-    width: 100%;
-    height: 100%;
-    animation-fill-mode: forwards;
-    animation: appear 0.25s;
-    object-fit: cover;
+.grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  overflow: clip;
+  margin: auto;
+  grid-gap: 2px;
+  max-width: 1600px;
 }
 
-@keyframes appear {
-    0% { opacity: 0; }
-    100% { opacity: 0.9; }  
+.overlay {
+  width: 100%;
+  height: 100%;
+  overflow: clip;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  color: white;
 }
 
-#main-grid {
-    background: linear-gradient(180deg, rgba(200,200,200,0) 0%, rgba(0,0,0,0.5) 50%);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: #CCCCCC;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.overlay-title {
+  position: absolute;
+  text-align: center;
+  color: inherit;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 2em;
+  padding: 8em;
 }
 
-#about {
-    margin: 3em;
+.overlay-image, a {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.5s;
+  filter: brightness(0.75);
+}
+
+.overlay-image:hover {
+  transform: scale(1.10);
+  cursor: pointer;
+}
+
+#overlay-name {
+  grid-column: span 2;
+  background: black;
+  color: white;
+}
+
+#overlay-image-name {
+  filter: blur(2px) brightness(0.75);
+}
+
+#overlay-image-name:hover {
+  filter: blur(2px) brightness(1);
+  transform: scale(1);
+  cursor: default;
 }
 
 #name {
-    color: #EEEEEE;
-    font-weight: bold;
-    font-size: 3em;
-    padding-bottom: 0.5em;
-    font-family: 'sans';
-    text-align: left;
+  font-weight: bold;
+  font-size: 2em;
 }
 
 #description {
-    font-family: 'serif';
-    font-size: 1em;
-    text-align: left;
+  max-width: 600px;
+  margin: auto;
+  pointer-events: auto;
 }
 
-#find-me {
-    color: #EEEEEE;
+#description p {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+#inline-email {
+  color: lightblue;
+  font-size: inherit;
+}
+
+#inline-email:hover {
+  cursor: text;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    height: calc(100vh * 3);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  #overlay-name {
+    grid-column: span 1;
+    font-size: 1.5em;
+  }
+
+  .overlay {
+    font-size: 2.5em;
+  }
+
+  .overlay-title {
     font-weight: bold;
-    font-size: 2em;
-    padding-bottom: 0.5em;
-    font-family: 'sans';
-}
-
-#link-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 4em;
-}
-
-.link {
-    text-decoration: none;
-}
-
-.logo {
-    display: inline;
-    width: 4em;
-    height: 4em;
-    mix-blend-mode: luminosity;
-    transition: 0.5s;
-    margin: 0.5em;
-}
-
-.logo:hover {
-    transform: scale(1.2);
-}
-
-.logo#gid {
-    width: 3.5em;
-    height: 3.5em;
-    vertical-align: super;
+  }
 }
