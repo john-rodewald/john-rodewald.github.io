@@ -23,7 +23,6 @@ body {
   overflow: clip;
   margin: auto;
   grid-gap: 2px;
-  max-width: 1600px;
 }
 
 .overlay {
@@ -103,7 +102,7 @@ body {
   cursor: text;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .grid {
     height: calc(100vh * 3);
     grid-template-columns: 1fr;
