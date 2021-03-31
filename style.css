@@ -2,13 +2,16 @@
   cursor: default;
   font-size: 12px;
   font-family: sans-serif;
-  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   background: #222222;
   margin: 4em;
+}
+
+html, body, * {
+  overflow-x: hidden;
 }
 
 .grid {
