@@ -2,6 +2,7 @@
   cursor: default;
   font-size: 12px;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -161,5 +162,9 @@ body {
 
   .overlay-title {
     font-weight: bold;
+  }
+
+  #webdev-animation {
+    border-radius: 0;
   }
 }
