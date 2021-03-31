@@ -58,6 +58,7 @@ html, body, * {
   cursor: pointer;
   transition: 0.5s;
   filter: brightness(0.75);
+  overflow: hidden;
 }
 
 .overlay-image:hover {
