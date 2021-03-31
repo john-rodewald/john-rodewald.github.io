@@ -175,4 +175,9 @@ body, html{
   #webdev-animation {
     border-radius: 0;
   }
+
+  #description, .overlay-title {
+    max-width: 300px;
+    text-align: justify;
+  }
 }
