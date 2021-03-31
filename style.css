@@ -8,7 +8,11 @@ body {
   margin: 0;
   background: #222222;
   margin: 4em;
+}
+
+body, html{
   overflow: hidden;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
