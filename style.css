@@ -8,10 +8,8 @@ body {
   margin: 0;
   background: #222222;
   margin: 4em;
-}
-
-html, body, * {
-  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .grid {
