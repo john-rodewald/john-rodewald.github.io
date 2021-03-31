@@ -6,13 +6,12 @@
 
 body {
   margin: 0;
-  padding: 0;
-  background: black;
-  overflow-x: hidden;
+  background: #222222;
+  margin: 4em;
 }
 
 .grid {
-  height: 100vh;
+  height: calc(100vh - 8em);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -22,7 +21,7 @@ body {
   justify-items: center;
   overflow: clip;
   margin: auto;
-  grid-gap: 2px;
+  grid-gap: 4em;
 }
 
 .overlay {
@@ -35,6 +34,7 @@ body {
   justify-content: center;
   justify-items: center;
   color: white;
+  border-radius: 8px;
 }
 
 .overlay-title {
@@ -58,21 +58,21 @@ body {
 
 .overlay-image:hover {
   transform: scale(1.10);
+  filter: brightness(1);
   cursor: pointer;
 }
 
 #overlay-name {
   grid-column: span 2;
-  background: black;
+  background: #222222;
   color: white;
 }
 
 #overlay-image-name {
-  filter: blur(2px) brightness(0.75);
+  filter: blur(2px) brightness(0.7);
 }
 
 #overlay-image-name:hover {
-  filter: blur(2px) brightness(1);
   transform: scale(1);
   cursor: default;
 }
@@ -102,11 +102,51 @@ body {
   cursor: text;
 }
 
+#webdev-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#webdev-animation {
+  background: linear-gradient(-45deg, #7400b8ff, #6930c3ff, #5e60ceff, #5390d9ff, #4ea8deff, #48bfe3ff, #56cfe1ff, #64dfdfff, #72efddff, #80ffdbff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#webdev-animation:hover {
+  filter: brightness(2);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @media only screen and (max-width: 900px) {
+  body {
+    margin: 0;
+  }
+
   .grid {
-    height: calc(100vh * 3);
+    grid-gap: 0;
+    height: calc(100vh * 2);
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
   }
 
   #overlay-name {
@@ -116,6 +156,7 @@ body {
 
   .overlay {
     font-size: 2em;
+    border-radius: 0;
   }
 
   .overlay-title {
