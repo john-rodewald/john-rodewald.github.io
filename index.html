@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>John Rodewald</title>
-  <meta name="author" content="john-rodewald">
-  <meta name="description" content="personal-website">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <title>John Rodewald</title>
+        <meta name="author" content="john-rodewald">
+        <meta name="description" content="personal-website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="style.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
-</head>
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+    </head>
 
-<body>
+    <body>
 
-  <div class="grid">
-    <div class="overlay" id="overlay-name">
-      <div class="overlay-title">
-        <div id="name">
-          John Rodewald
+        <div class="grid">
+            <div class="overlay" id="overlay-name">
+                <div class="overlay-title">
+                    <div id="name">
+                        John Rodewald
+                    </div>
+                    <div id="main-description" class="description">
+                        <p>Hi! I'm a fullstack engineer based in Switzerland. 🇨🇭</p>
+                        <p>I enjoy photography, cycling, and try to bake interesting desserts every now and then.</p>
+                        <p>Feel free to reach out to me! I'm always up for a chat. Reach me at <span id="inline-email">jnrodewald99@gmail.com</span></p>
+                    </div>
+                </div>
+                <img class="overlay-image" src="img/tiny/self.jpg" id="overlay-image-name"></img>
+            </div>
+            <div class="overlay" id="overlay-photography">
+                <div class="overlay-title">Photography</div>
+                <a href="https://www.flickr.com/photos/johnrodewald/" id="photography-link"><img class="overlay-image" src="img/tiny/plant.jpg" id="photography-image"></img></a>
+            </div>
+            <div class="overlay" id="overlay-webdev">
+                <div class="overlay-title" id="webdev-title">Web development</div>
+                <a id="webdev-link" href="https://github.com/john-rodewald/"><div id="webdev-animation"></div></a>
+            </div>
+            <div class="overlay" id="overlay-blog">
+                <div class="overlay-title" id="blog-title">
+                    Blog
+                    <div class="description">
+                        <p>I occasionally publish blog posts. It's really more of a Zettelkasten.</p>
+                    </div>
+                </div>
+                <a href="https://john-rodewald.github.io/blog" id="blog-link"></a>
+            </div>
         </div>
-        <div id="description">
-				  <p>Hi! I'm a fullstack engineer based in Switzerland. 🇨🇭</p>
-					<p>I enjoy photography, cycling, and try to bake interesting desserts every now and then.</p>
-          <p>Feel free to reach out to me! I'm always up for a chat. Reach me at <span id="inline-email">jnrodewald99@gmail.com</span></p>
-        </div>
-      </div>
-      <img class="overlay-image" src="img/tiny/self.jpg" id="overlay-image-name"></img>
-    </div>
-    <div class="overlay" id="overlay-photography">
-      <div class="overlay-title">Photography</div>
-      <a href="https://www.flickr.com/photos/johnrodewald/" id="photography-link"><img class="overlay-image" src="img/tiny/plant.jpg" id="photography-image"></img></a>
-    </div>
-    <div class="overlay" id="overlay-webdev">
-      <div class="overlay-title" id="webdev-title">Web development</div>
-      <a id="webdev-link" href="https://github.com/john-rodewald/"><div id="webdev-animation"></div></a>
-    </div>
-  </div>
 
-</body>
+    </body>
 
 </html>
