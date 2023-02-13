@@ -166,7 +166,7 @@ body {
     grid-gap: 0;
     height: calc(100vh * 2);
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
   }
 
   #overlay-name {
@@ -200,6 +200,12 @@ body {
 
   #overlay-photography:hover, #overlay-webdev:hover {
     transform: translateY(0px);
+  }
+
+  #overlay-blog {
+      grid-column: span 1;
+      height: 100%;
+      grid-row: 2;
   }
 
 }
