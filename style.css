@@ -136,7 +136,7 @@ body {
 }
 
 #overlay-blog {
-    height: 30%;
+    height: 50%;
     grid-column: span 2;
     align-self: baseline;
     background: #333333;
